@@ -7,6 +7,11 @@
  */
 public class NameGenerator
 {
+    private int INICIO = 0;
+    private int FIN_NOMBRE = 3;
+    private int FIN_APELLIDO = 3;
+    private int FIN_CIUDADNAC = 3;
+    private int FIN_APELLIDOMADRE = 2;
     
     /**
      * Constructor for objects of class NameGenerator
@@ -24,7 +29,8 @@ public class NameGenerator
      */
     public String generateStarWarsName(String nombre, String apellido, String apellidoMadre, String ciudadNac)
     {
-        return apellido.substring(0, 3) + nombre.toLowerCase().substring(0, 3) + " " + 
-            apellidoMadre.substring(0, 2) + ciudadNac.toLowerCase().substring(0, 3);
+        return apellido.substring(INICIO, FIN_APELLIDO) + nombre.toLowerCase().substring(INICIO, FIN_NOMBRE) +
+            " " +  apellidoMadre.substring(INICIO, FIN_APELLIDOMADRE) +
+            ciudadNac.toLowerCase().substring(INICIO, FIN_CIUDADNAC);
     }
 }
