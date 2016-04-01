@@ -7,7 +7,6 @@
  */
 public class NameGenerator
 {
-    private String nombreStarWars;
     
     /**
      * Constructor for objects of class NameGenerator
@@ -25,8 +24,7 @@ public class NameGenerator
      */
     public String generateStarWarsName(String nombre, String apellido, String apellidoMadre, String ciudadNac)
     {
-        nombreStarWars = apellido.substring(0, 3) + nombre.toLowerCase().substring(0, 3) + " " + 
+        return apellido.substring(0, 3) + nombre.toLowerCase().substring(0, 3) + " " + 
             apellidoMadre.substring(0, 2) + ciudadNac.toLowerCase().substring(0, 3);
-        return nombreStarWars;
     }
 }
